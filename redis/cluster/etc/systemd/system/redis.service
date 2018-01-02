@@ -1,0 +1,12 @@
+[Unit]
+Description=redis master and slave server on this node
+
+[Service]
+Type=forking
+ExecStart=/usr/local/bin/redis_node.sh start
+ExecStop=/usr/local/bin/redis_node.sh stop
+ExecReload=/usr/local/bin/redis_node.sh reload
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

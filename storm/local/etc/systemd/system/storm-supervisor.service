@@ -1,0 +1,10 @@
+[Unit]
+Description=Storm Nimbus Service
+
+[Service]
+Type=simple
+ExecStart=/opt/storm/apache-storm-1.1.1/bin/storm supervisor
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

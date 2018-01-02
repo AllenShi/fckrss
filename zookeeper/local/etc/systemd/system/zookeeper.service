@@ -1,0 +1,12 @@
+[Unit]
+Description=Zookeeper Service
+
+[Service]
+Type=forking
+ExecStart=/opt/zookeeper/zookeeper-3.4.11/bin/zkServer.sh start
+ExecStop=/opt/zookeeper/zookeeper-3.4.11/bin/zkServer.sh stop
+ExecReload=/opt/zookeeper/zookeeper-3.4.11/bin/zkServer.sh restart
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
